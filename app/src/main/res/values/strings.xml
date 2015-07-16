@@ -1,52 +1,52 @@
 <resources>
-    
-	<string name="app_name">Quiet Hours</string>
-    
-	<string name="action_settings">Settings</string>
-    
-	<string name="activity_main">MainActivity</string>
-    
-	<string name="activity_set_time">Set Time</string>
-    
-	<string name="set_time">Set time</string>
-    
-	<string name="scheduled">SCHEDULED</string>
-    
-	<string name="repeat_button">Repeat do not disturb time</string>
-    
-	<string name="do_not_disturb">Do not disturb</string>
-	<string name="exceptions">EXCEPTIONS</string>
-    
-	<string name="exception_settings">Exception settings</string>
-    
-	<string name="title_activity_exception">ExceptionActivity</string>
-    
-	<string name="hello_world">Hello world!</string>
-    
-	<string name="exceptions_list">EXCEPTIONS LIST</string>
-    
-	<string name="all_contacts">All contacts</string>
-    
-	<string name="add_contact">Add new contact</string>
-    
-	<string name="allow_calls_from_exceptions">Allow calls from exceptions</string>   
-	<string name="repeat_days_text">Repeat Days</string>
-    
-	<string name="all_days">All Days</string>
-    
-	<string name="days_of_week_0">Monday</string>
-    
-	<string name="days_of_week_1">Tuesday</string>
-    
-	<string name="days_of_week_2">Wednesday</string>
-    
-	<string name="days_of_week_3">Thursday</string>
-    
-	<string name="days_of_week_4">Friday</string>
-    
-	<string name="days_of_week_5">Saturday</string>
-    
-	<string name="days_of_week_6">Sunday</string>
+
+    <string name="app_name">Quiet Hours</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="activity_main">MainActivity</string>
+
+    <string name="activity_set_time">Set Time</string>
+
+    <string name="set_time">Set time</string>
+
+    <string name="scheduled">SCHEDULED</string>
+
+    <string name="repeat_button">Repeat do not disturb time</string>
+
+    <string name="do_not_disturb">Do not disturb</string>
+    <string name="exceptions">EXCEPTIONS</string>
+
+    <string name="exception_settings">Exception settings</string>
+
+    <string name="title_activity_exception">ExceptionActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="exceptions_list">EXCEPTIONS LIST</string>
+
+    <string name="all_contacts">All contacts</string>
+
+    <string name="add_contact">Add new contact</string>
+
+    <string name="allow_calls_from_exceptions">Allow calls from exceptions</string>
+    <string name="repeat_days_text">Repeat Days</string>
+
+    <string name="all_days">All Days</string>
+
+    <string name="days_of_week_0">Monday</string>
+
+    <string name="days_of_week_1">Tuesday</string>
+
+    <string name="days_of_week_2">Wednesday</string>
+
+    <string name="days_of_week_3">Thursday</string>
+
+    <string name="days_of_week_4">Friday</string>
+
+    <string name="days_of_week_5">Saturday</string>
+
+    <string name="days_of_week_6">Sunday</string>
 
 
 </resources>

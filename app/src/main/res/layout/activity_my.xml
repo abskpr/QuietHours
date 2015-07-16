@@ -3,108 +3,134 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:divider="@drawable/row_divider"
-    android:showDividers="middle"
+    android:orientation="vertical"
     android:padding="10dp"
-    android:orientation="vertical">
+    android:showDividers="middle">
 
 
-<LinearLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:paddingTop="15dp"
-    android:paddingBottom="15dp"
-    android:id="@+id/linearLayout">
-
-
-<TextView
-    android:layout_weight="1"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:text="@string/do_not_disturb"
-    android:textSize="@dimen/primary_text_size"
-    android:textColor="@color/primary_text_default_material_light" />
-<android.support.v7.widget.SwitchCompat
-
-    android:id="@+id/silent_switch1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:theme="@style/AppTheme"
-    android:clickable="true" />
-
-
-</LinearLayout>
     <LinearLayout
 
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:id="@+id/linearLayout1">
+        android:paddingTop="15dp">
 
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/scheduled"
-            android:textSize="@dimen/sec_text_size"
-            android:gravity="bottom"
-            android:textColor="@color/secondary_text_default_material_light" />
+            android:layout_weight="1"
+            android:text="@string/do_not_disturb"
+            android:textColor="@color/primary_text_default_material_light"
+            android:textSize="@dimen/primary_text_size" />
 
+        <android.support.v7.widget.SwitchCompat
+
+            android:id="@+id/silent_switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:theme="@style/AppTheme" />
 
 
     </LinearLayout>
+
     <LinearLayout
 
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:id="@+id/linearLayout2">
+        android:paddingTop="15dp">
 
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="@string/scheduled"
+            android:textColor="@color/secondary_text_default_material_light"
+            android:textSize="@dimen/sec_text_size" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/repeat_button"
-            android:textSize="@dimen/primary_text_size"
-            android:textColor="@color/primary_dark_material_dark" />
+            android:textColor="@color/primary_dark_material_dark"
+            android:textSize="@dimen/primary_text_size" />
+
         <android.support.v7.widget.SwitchCompat
 
             android:id="@+id/repeat_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:theme="@style/AppTheme"
-            android:clickable="true" />
-
+            android:clickable="true"
+            android:theme="@style/AppTheme" />
 
 
     </LinearLayout>
 
     <LinearLayout
 
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:id="@+id/linearLayout3">
+        android:paddingTop="15dp">
 
-
-        <TextView
-            android:layout_weight="1"
-            android:id="@+id/setTime"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/set_time"
-            android:textSize="@dimen/primary_text_size"
-            android:textColor="@color/primary_dark_material_dark"
-            android:clickable="true" />
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/setTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:text="@string/set_time"
+                android:textColor="@color/primary_dark_material_dark"
+                android:textSize="@dimen/primary_text_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/main_from_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/main_to_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -112,55 +138,55 @@
             android:textSize="@dimen/symbol_size" />
 
 
-
     </LinearLayout>
+
     <LinearLayout
 
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:id="@+id/linearLayout4">
+        android:paddingTop="15dp">
 
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/exceptions"
-            android:textSize="@dimen/sec_text_size"
+            android:layout_weight="1"
             android:gravity="bottom"
-            android:textColor="@color/secondary_text_default_material_light" />
-
+            android:text="@string/exceptions"
+            android:textColor="@color/secondary_text_default_material_light"
+            android:textSize="@dimen/sec_text_size" />
 
 
     </LinearLayout>
+
     <LinearLayout
 
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:id="@+id/linearLayout5">
+        android:paddingTop="15dp">
 
 
         <TextView
-            android:layout_weight="1"
             android:id="@+id/exceptions_settings"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
             android:text="@string/exception_settings"
-            android:textSize="@dimen/primary_text_size"
             android:textColor="@color/primary_dark_material_dark"
-            android:clickable="true" />
+            android:textSize="@dimen/primary_text_size" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=">"
             android:textSize="@dimen/symbol_size" />
-
 
 
     </LinearLayout>
