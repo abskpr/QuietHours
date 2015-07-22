@@ -145,8 +145,22 @@ public class SetTimeActivity extends AppCompatActivity implements CheckBox.OnChe
     }
 
     @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("checkAll", check_all.isChecked());
+        editor.putBoolean("checkMon", check_mon.isChecked());
+        editor.putBoolean("checkTue", check_tue.isChecked());
+        editor.putBoolean("checkWed", check_wed.isChecked());
+        editor.putBoolean("checkThu", check_thu.isChecked());
+        editor.putBoolean("checkFri", check_fri.isChecked());
+        editor.putBoolean("checkSat", check_sat.isChecked());
+        editor.putBoolean("checkSun", check_sun.isChecked());
+        editor.commit();
+    }
 
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (buttonView.getId() == check_all.getId()) {
             if (check_all.isChecked()) {
                 check_mon.setChecked(true);
@@ -158,29 +172,12 @@ public class SetTimeActivity extends AppCompatActivity implements CheckBox.OnChe
                 check_sun.setChecked(true);
             }
         }
-       if (check_mon.isChecked() && check_tue.isChecked() && check_wed.isChecked() && check_thu.isChecked() && check_fri.isChecked() && check_sat.isChecked() && check_sun.isChecked()) {
+
+        if (check_mon.isChecked() && check_tue.isChecked() && check_wed.isChecked() && check_thu.isChecked() && check_fri.isChecked() && check_sat.isChecked() && check_sun.isChecked()) {
             check_all.setChecked(true);
         } else {
             check_all.setChecked(false);
         }
-
-        SharedPreferences.Editor editor = preferences.edit();
-        Boolean all=check_all.isChecked();
-        Boolean mon=check_mon.isChecked();
-        Boolean tue=check_tue.isChecked();
-        Boolean wed=check_wed.isChecked();
-        Boolean thu=check_thu.isChecked();
-        Boolean fri=check_fri.isChecked();
-        Boolean sat=check_sat.isChecked();
-        Boolean sun=check_sun.isChecked();
-        editor.putBoolean("checkAll", all);
-        editor.putBoolean("checkMon", mon);
-        editor.putBoolean("checkTue", tue);
-        editor.putBoolean("checkWed", wed);
-        editor.putBoolean("checkThu", thu);
-        editor.putBoolean("checkFri", fri);
-        editor.putBoolean("checkSat", sat);
-        editor.putBoolean("checkSun", sun);
-        editor.commit();
     }
 }
+

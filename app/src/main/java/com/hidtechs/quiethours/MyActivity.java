@@ -33,7 +33,7 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
     SwitchCompat s1, s2;
     LinearLayout timerow;
     Intent intent;
-    TextView t1, t2, ft, tt;
+    TextView t1, t2, ft, tt, d;
     SharedPreferences preferences;
     BroadcastReceiver mReceiver;
     IntentFilter filter;
@@ -88,6 +88,7 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
         t2 = (TextView) findViewById(R.id.exceptions_settings);
         ft = (TextView) findViewById(R.id.main_from_time);
         tt = (TextView) findViewById(R.id.main_to_time);
+        d = (TextView) findViewById(R.id.days);
         timerow = (LinearLayout) findViewById(R.id.linearLayout3);
 
         s1.setOnClickListener(this);
@@ -145,8 +146,35 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
         ttenthMinute = String.valueOf(toMinute_x / 10);
         tonceMinute = String.valueOf(toMinute_x % 10);
         tt.setText(" to " + ttenthHour + "" + tonceHour + " : " + ttenthMinute + "" + tonceMinute);
-    }
+        Boolean Al = preferences.getBoolean("checkAll", false);
+        Boolean Mo = preferences.getBoolean("checkMon", false);
+        Boolean Tu = preferences.getBoolean("checkTue", false);
+        Boolean We = preferences.getBoolean("checkWed", false);
+        Boolean Th = preferences.getBoolean("checkThu", false);
+        Boolean Fr = preferences.getBoolean("checkFri", false);
+        Boolean Sa = preferences.getBoolean("checkSat", false);
+        Boolean Su = preferences.getBoolean("checkSun", false);
+        Boolean[] daysChecked = {Al, Mo, Tu, We, Th, Fr, Sa, Su};
+        String[] days = {"Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"};
+        String buildString = " on";
+        if (daysChecked[0]) {
+            d.setText(" on All Days");
+        } else if (daysChecked[1] && daysChecked[2] && daysChecked[3] && daysChecked[4] && daysChecked[5] && !daysChecked[6] && !daysChecked[7]) {
+            d.setText(" on Weekdays");
+        } else if (!daysChecked[1] && !daysChecked[2] && !daysChecked[3] && !daysChecked[4] && !daysChecked[5] && daysChecked[6] && daysChecked[7]) {
+            d.setText(" on Weekends");
+        } else {
+            for (int i = 1; i < daysChecked.length; i++) {
+                if (daysChecked[i]) {
+                    if (buildString == " on")
+                        buildString += " " + days[i-1];
+                    else buildString += ", " + days[i-1];
+                }
+            }
+            d.setText(buildString);
+        }
 
+    }
 
     private void isRepeatOn() {
         if (!s2.isChecked()) {
