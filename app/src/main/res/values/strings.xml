@@ -15,6 +15,9 @@
     <string name="repeat_button">Repeat do not disturb time</string>
 
     <string name="do_not_disturb">Do not disturb</string>
+
+    <string name="dnd_description">Calls and notifications that arrive while your phone is locked will be silenced</string>
+
     <string name="exceptions">EXCEPTIONS</string>
 
     <string name="exception_settings">Exception settings</string>
